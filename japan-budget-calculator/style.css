@@ -1,143 +1,180 @@
 html {
-    background-color: #121212;
-  }
-  
+  background-color: #f3efe9;
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(255, 248, 250, 0.26), rgba(246, 241, 244, 0.34)),
+    url("https://images.pexels.com/photos/37078321/pexels-photo-37078321.jpeg?cs=srgb&dl=pexels-arlindphotography-37078321.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #2f2b29;
+  margin: 0;
+  min-height: 100vh;
+  padding: 3rem 1.25rem 4rem;
+}
+
+img {
+  display: block;
+  width: min(100%, 920px);
+  max-height: 320px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+}
+
+.budget-section {
+  max-width: 22rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.15rem 1.25rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 12px;
+  box-shadow: 0 16px 38px rgba(71, 57, 59, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.budget-section h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2b2425;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 0 0 1.5rem;
+}
+
+.budget-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  color: #4e4848;
+}
+
+.budget-row label {
+  flex: 0 0 auto;
+}
+
+.budget-row input {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 11rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(91, 77, 79, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.58);
+  color: #2f2b29;
+  font-size: 0.95rem;
+  transition: border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+
+.budget-row input:focus {
+  outline: none;
+  border-color: rgba(156, 127, 132, 0.36);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.28);
+}
+
+.budget-row input::placeholder {
+  color: rgba(82, 74, 75, 0.58);
+}
+
+#calc-btn,
+#clear-btn {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(94, 78, 81, 0.14);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(79, 60, 63, 0.9), rgba(61, 46, 48, 0.92));
+  color: #fffaf9;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    opacity 220ms ease;
+}
+
+#calc-btn {
+  margin-top: 1.25rem;
+}
+
+#clear-btn {
+  margin-top: 0.5rem;
+}
+
+#calc-btn:hover,
+#clear-btn:hover {
+  background: linear-gradient(180deg, rgba(99, 77, 81, 0.92), rgba(76, 58, 61, 0.94));
+  border-color: rgba(107, 84, 88, 0.22);
+  box-shadow: 0 10px 24px rgba(71, 57, 59, 0.18);
+  transform: translateY(-1px);
+}
+
+#calc-btn:active,
+#clear-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#budget-result {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #7b5256;
+  min-height: 1.6em;
+}
+
+#jpy-result {
+  margin-top: 0.45rem;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #5d5556;
+  min-height: 1.4em;
+}
+
+#rate-info {
+  margin-top: 0.4rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(72, 64, 65, 0.62);
+  min-height: 1.3em;
+}
+
+@media (max-width: 640px) {
   body {
-    background-color: #121212;
-    background-image: radial-gradient(ellipse 120% 80% at 50% -20%, #1c1c1c 0%, #121212 55%);
-    color: #c8c8c8;
-    margin: 0;
-    min-height: 100vh;
+    padding: 1.25rem 0.9rem 2.5rem;
   }
-  
-  h1 {
-    color: #e0e0e0;
-    margin-top: 100px;
-    text-align: center;
-  }
-  
-  .big-text,
-  .small-text {
-    font-family: "Times New Roman", Times, serif;
-    color: #c8c8c8;
-    text-align: center;
-    font-size: 30px;
-  }
-  
-  a {
-    color: #c8c8c8;
-    font-size: 30px;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: gold;
-    font-size: 35px;
-  }
-  
+
   img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 12px;
   }
-  
+
   .budget-section {
-    max-width: 22rem;
-    margin: 3rem auto 4rem;
-    padding: 0 1rem;
+    max-width: 100%;
   }
-  
-  .budget-section h2 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.25rem;
-    font-weight: normal;
-    color: #b0b0b0;
-    text-align: center;
-    letter-spacing: 0.05em;
-    margin: 0 0 1.5rem;
-  }
-  
+
   .budget-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.85rem;
-    font-size: 0.95rem;
-    color: #a8a8a8;
+    gap: 0.75rem;
+    font-size: 0.9rem;
   }
-  
-  .budget-row label {
-    flex: 0 0 auto;
-  }
-  
+
   .budget-row input {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 11rem;
-    padding: 0.45rem 0.6rem;
-    border: 1px solid #333;
-    border-radius: 2px;
-    background: #1a1a1a;
-    color: #e8e8e8;
-    font-size: 0.95rem;
+    max-width: 9.5rem;
   }
-  
-  .budget-row input:focus {
-    outline: none;
-    border-color: #555;
-  }
-  
-  .budget-row input::placeholder {
-    color: #666;
-  }
-  
-  #calc-btn,
-  #clear-btn {
-    display: block;
-    width: 100%;
-    padding: 0.55rem 1rem;
-    border: 1px solid #444;
-    border-radius: 2px;
-    background: #1e1e1e;
-    color: #c8c8c8;
-    font-size: 0.95rem;
-    cursor: pointer;
-  }
-
-  #calc-btn {
-    margin-top: 1.25rem;
-  }
-
-  #clear-btn {
-    margin-top: 0.5rem;
-  }
-  
-  #calc-btn:hover,
-  #clear-btn:hover {
-    background: #262626;
-    border-color: #555;
-  }
-  
-  #budget-result {
-    margin-top: 1.25rem;
-    text-align: center;
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: #d4af37;
-    min-height: 1.6em;
-  }
-  
-  #jpy-result {
-    margin-top: 0.45rem;
-    text-align: center;
-    font-size: 1.05rem;
-    color: #9c9c9c;
-    min-height: 1.4em;
-  }
-  
-  #jpy-result.over-budget {
-    color: #d65a5a;
-  }
+}
